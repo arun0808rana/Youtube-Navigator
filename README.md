@@ -1,7 +1,7 @@
 # Youtube-Navigator
 
-`alt+i` and `alt+k` to navigate up and down the video results in a youtube search results page.
-`space` or `enter` to open the currently focused video.
+`alt+i` and `alt+k` to navigate up and down the video results in a youtube search results page.  
+`space` or `enter` to open the currently focused video.  
 
 ### Demo
 ![Peek 2022-10-06 23-14](https://user-images.githubusercontent.com/68982541/194383452-22ccbedb-6dad-4c5e-b66a-153c28357787.gif)
