@@ -10,7 +10,7 @@
 // ==UserScript==
 // @name        Youtube Navigator
 // @namespace   Violentmonkey Scripts
-// @match       https://www.youtube.com/results*
+// @match       https://www.youtube.com/results
 // @grant       none
 // @version     1.0
 // @run-at      document-end
@@ -33,7 +33,13 @@ setTimeout(()=>{
 }, 500);
 
 document.onkeydown = e=>{
-  console.log(e.key, 'KEY')
+  // ignore current script on any other youtube page
+  // this step is required bcoz youtube i guess uses internal routing
+  // and script keeps running even on video play page
+  if(window.location.href.includes('https://www.youtube.com/watch')){
+    return;
+  }
+  
   if(e.altKey && e.key === 'k'){
     ++currentIndex;
     if(prevLink?.style?.border){
